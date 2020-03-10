@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Button = ({styleClass,value, onClick}) => (
+const Button = ({value, onClick}) => (
     <button  
-    onClick={(event : MouseEvent<HTMLButtonElement>) => {onClick(event)}}>
+    onClick={(event) => {onClick(event)}}>
         {value}
     </button>
 )

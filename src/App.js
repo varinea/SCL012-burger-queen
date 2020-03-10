@@ -1,32 +1,18 @@
-import React, { Component } from 'react';
-import '../src/css/App.css';
-import Button from './Components/Button'
-import Header from './Components/header'
-import './css/ButtonMesero.css';
-export default class app extends Component{
-   handleClick= (event) => {
-    event.preventDefault();
-    alert('Button Clicked');
-   };
-   
-  render(){
+import React,{ Component } from 'react';
+import FirstView from './Components/FirstView.js'
+import {BrowserRouter as Router , Route , Switch} from 'react-router-dom'
+import  Menu  from './Components/Menu.js';
+import Orders from './Components/Orders';
 
-    return (
-      <div className="App">  
-      
-        <div className="App-header">
-        <Header titulo='Burger Queen'/>
-
-        <Button
-            className="App-boton"
-            onClick={this.handleClick} 
-            value='wenaaaa' >
-          </Button>
-       </div>
-    </div>
-    )
-   
-  }
+function App (){
+  return(
+    <Router>
+      <Switch>
+        <Route exact path ='/' component = { FirstView } />
+        <Route exact path ='/menu' component = { Menu } />
+        <Route exact path ='/orders' component = { Orders } />
+      </Switch>
+    </Router>
+  )
 }
-
-   
+export default App
