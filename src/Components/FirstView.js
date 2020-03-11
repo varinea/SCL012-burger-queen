@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
-import Header from '../Components/header';
-import { Button } from 'react-bootstrap'
-import '../css/Menu.css';
-import { Link } from 'react-router-dom'
-
-
+import Header from '../Components/header.js';
+import { Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 class FirstView extends Component {
   render() {
     return (
@@ -13,12 +10,15 @@ class FirstView extends Component {
           <Header titulo='Burger Queen' />
         </div>
 
-        <div className='btn-lunch'>
+        <div className='Breakfast'>
           <Link to="/menu">
-            <Button variant="warning" size="lg" block>Mesera/o </Button>
+            <Button variant="danger" size="lg" > Mesero </Button>
           </Link>
         </div>
-        <div className='btn-lunch'>
+        <div className='lunch'>
+
+          <Button variant="warning" size="lg" block>Cocinero</Button>
+
         </div>
       </div>
     )
