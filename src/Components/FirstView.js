@@ -41,7 +41,7 @@ export default class FirstView extends Component {
  render() {
      
  return(
- <div> 
+ <div className='App'>  
      <Link to="/menu">
      HOLA
      </Link>
