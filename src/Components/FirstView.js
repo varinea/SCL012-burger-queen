@@ -1,31 +1,28 @@
 import React, { Component } from 'react';
-//import '../src/css/App.css';
-import Header from '../Components/header'
-import '../css/ButtonMesero.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import Header from '../Components/header';
+import { Button } from 'react-bootstrap'
+import '../css/Menu.css';
 import { Link } from 'react-router-dom'
 
-export default class FirstView extends Component {
 
+class FirstView extends Component {
   render() {
-
     return (
-      <div className="App">
-        <div className="App-header">
+      <div className='backgroundMenu'>
+        <div >
           <Header titulo='Burger Queen' />
         </div>
 
-        <div className='btn-Waiter'>
+        <div className='btn-lunch'>
           <Link to="/menu">
-            <button>Mesero</button>
+            <Button variant="warning" size="lg" block>Mesera/o </Button>
           </Link>
         </div>
-        <div>
-          <button value='Cocina' />
+        <div className='btn-lunch'>
         </div>
       </div>
     )
 
   }
 }
-
+export default FirstView;
