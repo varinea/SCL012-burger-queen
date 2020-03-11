@@ -27,16 +27,5 @@ export default class FirstView extends Component {
     )
 
   }
-
-  /* render() {
- 
-     return (
-       <div>
-          <Link to="/menu">
-            HOLA
-      </Link>
-        </div>
-        )
-      }*/
 }
 

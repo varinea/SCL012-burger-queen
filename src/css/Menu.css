@@ -1,0 +1,16 @@
+.backgroundMenu{
+    background-image:url("../img/fondo1.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    flex-direction: column;
+}
+.btnBreakfast{
+    color: red;
+}
+  

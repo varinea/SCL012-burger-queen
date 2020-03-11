@@ -1,37 +1,30 @@
 import React, { Component } from 'react';
-import Header from '../Components/header'
-import Button from '../Components/Button';
+import Header from '../Components/header';
+import { Button } from 'react-bootstrap'
+import '../css/Menu.css';
 import { Link } from 'react-router-dom'
-import NewOrder from '../Components/Orders';
 
-
-
-export default class Menu extends Component {
-
-
+class Menu extends Component {
     render() {
-
         return (
-            <div className="App">
-                <div className="App-header">
-                    <Header titulo='Burger Queen' />
+            <div className='backgroundMenu'>
+                <div >
+                    <Header titulo='Menu' />
                 </div>
 
-                <div className='btn-Waiter'>
-                    <Link to="/order">
-                        <Button
-                            value='desayuno' />
+                <div className='btnBreakfast'>
+                    <Link to="/orderB">
+                        <Button variant="warning" size="lg" block> Desayuno </Button>
                     </Link>
                 </div>
-                <div>
-                    <Button value='cena' />
+                <div className='btn-lunch'>
+                    <Link to="/orderD">
+                        <Button variant="warning" size="lg" block>Almuerzo o Cena</Button>
+                    </Link>
                 </div>
-                <NewOrder
-                    createNewOrder={this.createNewOrder}
-                />
             </div>
         )
 
-
     }
 }
+export default Menu;
