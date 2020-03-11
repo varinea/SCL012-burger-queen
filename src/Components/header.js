@@ -3,7 +3,7 @@ import React from 'react';
 const Header = ({ titulo}) => (
     
     <header>
-        <h1 className="probando">
+        <h1 className="Tittle-App">
             {titulo}
         </h1>
     </header>
