@@ -1,52 +1,28 @@
-import React, { Component } from 'react';
-//import '../src/css/App.css';
-//import Header from './Components/header'
-//import './css/ButtonMesero.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-// import Button from './Components/Button';
-import {Link} from 'react-router-dom'
-
-export default class FirstView extends Component {
-  /**
-   * @name handleClick
-   * @param {Event} event - lol
-   * @description previene el comportamiento por defecto
-   * y hace un alert
-   */
- /* handleClick = (event) => {
-    event.preventDefault();
-    //  console.dir(event);
-    alert("funciona");
-  };
-  
+import React, {Component} from 'react';
+import Header from '../Components/header.js';
+import {Button} from 'react-bootstrap';
+import {Link} from 'react-router-dom';
+class FirstView extends Component {
   render() {
-     
     return (
-      <div className="App">
-        <div className="App-header">
+      <div className='backgroundMenu'>
+        <div >
           <Header titulo='Burger Queen' />
         </div>
-
-        <div className='btn-Waiter'>
-         <Button 
-            value='Mesero'
-            onClick={this.handleClick}/>
-          <Button value='Camarero'/>
-        </div> 
+        
+        <div className='Breakfast'>
+          <Link to="/menu">
+            <Button variant="danger" size="lg" > Mesero </Button>
+          </Link>
+          </div> 
+          <div className='lunch'>
+          
+              <Button variant="warning" size="lg" block>Cocinero</Button>
+            
+          </div>
       </div>
     )
 
   }
-  */
- render() {
-     
- return(
- <div className='App'>  
-     <Link to="/menu">
-     HOLA
-     </Link>
-     </div>
- )
- }
 }
-
+export default FirstView;

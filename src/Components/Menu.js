@@ -13,12 +13,12 @@ class Menu extends Component {
           </div>
           
           <div className='btnBreakfast'>
-            <Link to="/orderB">
+            <Link to="/OrdersB">
               <Button variant="warning" size="lg" block> Desayuno </Button>
             </Link>
             </div> 
             <div className='btn-lunch'>
-              <Link to="/orderD">
+              <Link to="/OrdersD">
                 <Button variant="warning" size="lg" block>Almuerzo o Cena</Button>
               </Link>
             </div>
