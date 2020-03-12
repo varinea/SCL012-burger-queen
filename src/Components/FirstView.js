@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import Header from '../Components/header.js';
 import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+
+
+
 class FirstView extends Component {
   render() {
     return (
@@ -12,12 +15,12 @@ class FirstView extends Component {
 
         <div className='Breakfast'>
           <Link to="/menu">
-            <Button variant="danger" size="lg" > Mesero </Button>
+            <Button variant = "danger"className="bntMesero"> Mesero </Button>
           </Link>
         </div>
         <div className='lunch'>
 
-          <Button variant="warning" size="lg" block>Cocinero</Button>
+          <Button color="danger">Cocinero</Button>
 
         </div>
       </div>
