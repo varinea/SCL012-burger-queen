@@ -1,28 +1,24 @@
-import React,{Component } from 'react';
-import Header from '../Components/header.js'
-import {Button} from 'react-bootstrap'
+import React,{Component} from 'react'
+import Header from './header.js';
+import {Button} from 'react-bootstrap';
 import '../css/Menu.css';
-import db from '../Config';
-import Client from '../Components'
+import Clientfrom './Component/Client';
 
-state = {
-  items:[]  //se rellenara con las respuestas que se tengand de componentDiMount
-}
-
-componentDidMount(){
-  db.collection('Client').get().then((snapShots) => {
-    this.setStates({
-      items:snapShots.docs.map(doc => {
-        console.log(doc.data());
-      })
-    })
-  })
-}
 
 
 class Dinner extends Component {
     render() {
       return (
+        <div className="Client">
+        <Container>
+        <title/>
+        <Client/>
+        </Container>
+        </div>
+      
+
+
+
         <div className='backgroundMenu'>
           <div >
             <Header titulo='Almuerzo / Cena' />
