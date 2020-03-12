@@ -44,7 +44,7 @@ class NewOrder extends Component {
         const { cafeAmericano, cafeLeche, sandwich, jugo } = this.state.orderList
         // Generar objeto con los datos
         const newOrder = { ...this.state.orderList }
-        newOrder.id = uuid(); // usando libreria de id
+        newOrder.id = uuid(); // usando libreria de id //uuid es una libreria.
 
         // Agregar la orderList al state de App ------->REVISAAAR
         this.props.createNewOrder(newOrder)
