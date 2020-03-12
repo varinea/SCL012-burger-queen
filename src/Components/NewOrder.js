@@ -5,6 +5,8 @@ import uuid from 'uuid/v4'
 
 const stateInicial = {
     orderList: {
+        cliente: '',
+        mesa: 1,
         cafeAmericano: 0,
         cafeLeche: 0,
         sandwich: 0,
@@ -24,6 +26,15 @@ class NewOrder extends Component {
                 }
             })
         }
+    }
+    handleChange = e => {
+        // colocar lo que el usuario escribe en el state
+        this.setState({
+            orderList: {
+                ...this.state.orderList, // se hace una copia de lo que habia en los inputs
+                [e.target.name]: e.target.value // se actualiza el valor del input cambiado
+            }
+        })
     }
 
     // Cuando el usuario envía el formulario
@@ -48,6 +59,24 @@ class NewOrder extends Component {
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>
+                    <div>
+                        <input
+                            type="text"
+                            placeholder="Cliente"
+                            name="cliente"
+                            onChange={this.handleChange} // cada vez que se escribe en el input se activará el evento handleChange
+                            value={this.state.orderList.cliente}  // guardando el valor de lo escrito
+                        />
+                    </div>
+                    <div>
+                        <input
+                            type="number"
+                            placeholder="Número Mesa"
+                            name="mesa"
+                            onChange={this.handleChange} // cada vez que se escribe en el input se activará el evento handleChange
+                            value={this.state.orderList.mesa}  // guardando el valor de lo escrito
+                        />
+                    </div>
 
                     <div >
                         <Button variant="warning" size="lg" block name="cafeAmericano" onClick={this.handleClick}
