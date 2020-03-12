@@ -1,7 +1,7 @@
 import React from 'react';
 import OrderList from './OrderList'
 
-const FinalOrder = ({ orderLists }) => {
+const FinalOrder = ({ orderLists, eliminateOrder }) => {
     return (
         <div>
             <h1>Lista de pedido</h1>
@@ -11,6 +11,7 @@ const FinalOrder = ({ orderLists }) => {
                     <OrderList
                         key={orderList.id}
                         orderList={orderList}
+                        eliminateOrder={eliminateOrder}
                     />
                 ))}
             </div>

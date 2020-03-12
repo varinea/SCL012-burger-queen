@@ -3,8 +3,6 @@ import NewOrder from '../Components/NewOrder'
 import Header from '../Components/header.js'
 import FinalOrder from '../Components/FinalOrder.js'
 
-
-
 class Breakfast extends Component {
     state = {
         orderLists: []
@@ -16,7 +14,15 @@ class Breakfast extends Component {
         // Agregar el nuevo state 
         this.setState({
             orderLists // se le puede poner orderLists : orderLists pero se omite por tener el mismo nombre
+        })
+    }
 
+    // Eliminando pedido 
+    eliminateOrder = id => {
+        const actualOrders = [...this.state.orderLists];
+        const orderLists = actualOrders.filter(orderList => orderList.id !== id)
+        this.setState({
+            orderLists
         })
     }
     render() {
@@ -30,7 +36,9 @@ class Breakfast extends Component {
                 </div>
                 <div>
                     <FinalOrder
-                        orderLists={this.state.orderLists} />
+                        orderLists={this.state.orderLists}
+                        eliminateOrder={this.eliminateOrder}
+                    />
                 </div>
             </div>
 

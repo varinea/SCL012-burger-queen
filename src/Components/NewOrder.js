@@ -18,14 +18,14 @@ const stateInicial = {
 class NewOrder extends Component {
     state = { ...stateInicial }
     handleClick = e => {
-        if (e.target.value === '') {
-            this.setState({
-                orderList: {
-                    ...this.state.orderList, // se hace una copia de lo que habia en los inputs
-                    [e.target.name]: e.target.value + 1 // se actualiza el valor del input cambiado
-                }
-            })
-        }
+
+        this.setState({
+            orderList: {
+                ...this.state.orderList, // se hace una copia de lo que habia en los inputs
+                [e.target.name]: e.target.value + 1 // se actualiza el valor del input cambiado
+            }
+        })
+
     }
     handleChange = e => {
         // colocar lo que el usuario escribe en el state
