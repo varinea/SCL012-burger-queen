@@ -2,7 +2,6 @@ import {Component} from 'react'
 import db from '../Config';
 import '../css/Menu.css';
 
-
 export default class Client extends Component {
 
   state = {
@@ -19,7 +18,6 @@ export default class Client extends Component {
     }),error => {
       console.log(error);
     }
-    
   }
 }
 
