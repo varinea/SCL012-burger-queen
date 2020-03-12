@@ -1,33 +1,36 @@
-import React,{Component } from 'react';
+import React, { Component } from 'react';
+import NewOrder from '../Components/NewOrder'
 import Header from '../Components/header.js'
-import {Button} from 'react-bootstrap'
-import '../css/Menu.css';
+
 
 class Breakfast extends Component {
+    state = {
+        orderList: []
+    }
+    createNewOrder = data => { // Pasando datos desde nuevacita.js
+        console.log(data);
+        // Copiar state actual
+        const orderList = [...this.state.orderList, data]; // esto es como un push
+        // Agregar el nuevo state 
+        this.setState({
+            orderList // se le puede poner orderList : orderList pero se omite por tener el mismo nombre
+        })
+    }
     render() {
-      return (
-        <div className='backgroundMenu'>
-          <div >
-            <Header titulo='Desayunos' />
-          </div>
-          
-          <div >
-            
-            <Button variant="warning" size="lg" block> Cafe Americano $500</Button>
-            
-            </div> 
-            <div >
-             <Button variant="warning" size="lg" block>Cafe con Leche $700</Button>
+        return (
+            <div className='backgroundMenu'>
+
+                <Header titulo='Desayunos' />
+
+                <div>
+                    <NewOrder createNewOrder={this.createNewOrder} />
+                </div>
+
             </div>
-            <div >
-             <Button variant="warning" size="lg" block>Sandwich de jamón y queso $1000</Button>
-            </div>
-            <div >
-             <Button variant="warning" size="lg" block>Jugo de frutas natural $700</Button>
-            </div>
-        </div>
-      )
-      
+
+        );
     }
 }
+
+
 export default Breakfast;
