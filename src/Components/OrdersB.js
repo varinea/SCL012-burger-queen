@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import NewOrder from '../Components/NewOrder'
 import Header from '../Components/header.js'
+import FinalOrder from '../Components/FinalOrder.js'
+
 
 
 class Breakfast extends Component {
@@ -25,7 +27,10 @@ class Breakfast extends Component {
                 <div>
                     <NewOrder createNewOrder={this.createNewOrder} />
                 </div>
-
+                <div>
+                    <FinalOrder
+                        orderList={this.state.orderList} />
+                </div>
             </div>
 
         );

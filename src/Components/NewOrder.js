@@ -4,10 +4,10 @@ import '../css/Menu.css';
 
 const stateInicial = {
     orderList: {
-        cafeAmericano: '',
-        cafeLeche: '',
-        sandwich: '',
-        jugo: '',
+        cafeAmericano: 0,
+        cafeLeche: 0,
+        sandwich: 0,
+        jugo: 0,
     },
     error: false
 }
@@ -15,12 +15,14 @@ const stateInicial = {
 class NewOrder extends Component {
     state = { ...stateInicial }
     handleClick = e => {
-        this.setState({
-            orderList: {
-                ...this.state.orderList, // se hace una copia de lo que habia en los inputs
-                [e.target.name]: 1 // se actualiza el valor del input cambiado
-            }
-        })
+        if (e.target.value === '') {
+            this.setState({
+                orderList: {
+                    ...this.state.orderList, // se hace una copia de lo que habia en los inputs
+                    [e.target.name]: e.target.value + 1 // se actualiza el valor del input cambiado
+                }
+            })
+        }
     }
 
     // Cuando el usuario envía el formulario
