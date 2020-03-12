@@ -1,8 +1,20 @@
 import React from 'react';
+import OrderList from './OrderList'
 
-const FinalOrder = () => {
+const FinalOrder = ({ orderLists }) => {
     return (
-        <h1>Lista de pedido</h1>
+        <div>
+            <h1>Lista de pedido</h1>
+
+            <div>
+                {orderLists.map(orderList => (
+                    <OrderList
+                        key={orderList.id}
+                        orderList={orderList}
+                    />
+                ))}
+            </div>
+        </div>
     )
 }
 

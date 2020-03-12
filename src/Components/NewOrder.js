@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Button } from 'react-bootstrap'
 import '../css/Menu.css';
+import uuid from 'uuid/v4'
 
 const stateInicial = {
     orderList: {
@@ -32,7 +33,7 @@ class NewOrder extends Component {
         const { cafeAmericano, cafeLeche, sandwich, jugo } = this.state.orderList
         // Generar objeto con los datos
         const newOrder = { ...this.state.orderList }
-        // newOrder.id = uuid(); // usando libreria de id
+        newOrder.id = uuid(); // usando libreria de id
 
         // Agregar la orderList al state de App ------->REVISAAAR
         this.props.createNewOrder(newOrder)
