@@ -1,55 +1,47 @@
 import React, { Component } from 'react';
+import NewOrder from '../Components/NewOrderD'
 import Header from './header.js'
-import { Button } from 'react-bootstrap'
 import '../css/Menu.css';
-
-
+import FinalOrder from '../Components/FinalOrderD.js'
 
 class Dinner extends Component {
+  state = {
+    orderLists: []
+  }
+  createNewOrder = data => {
+    console.log(data);
+
+    const orderLists = [...this.state.orderLists, data];
+    this.setState({
+      orderLists
+    })
+  }
+
+  // Eliminando pedido 
+  eliminateOrder = id => {
+    const actualOrders = [...this.state.orderLists];
+    const orderLists = actualOrders.filter(orderList => orderList.id !== id)
+    this.setState({
+      orderLists
+    })
+  }
   render() {
     return (
       <div className='backgroundMenu'>
         <div >
           <Header titulo='Almuerzo / Cena' />
         </div>
-        <div >
-          <div >
-            <Header titulo='Hamburguesas' />
-          </div>
-          <Button variant="warning" size="lg" block> Hamburguesa Simple $1000 </Button>
-        </div>
-        <div >
-          <Button variant="warning" size="lg" block>Hamburguesa Doble $1500</Button>
-        </div>
-        <div >
-          <Header titulo='Acompañamientos' />
-        </div>
-        <div >
-          <Button variant="warning" size="lg" block>Papas fritas $500</Button>
-        </div>
-        <div >
-          <Button variant="warning" size="lg" block>Aros de cebolla $500</Button>
-        </div>
-        <div >
-          <Header titulo='Para Tomar' />
-        </div>
-        <div >
-          <Button variant="warning" size="lg" block>Agua 500ml $500</Button>
-        </div>
-        <div >
-          <Button variant="warning" size="lg" block>Agua 750ml $700</Button>
-        </div>
-        <div >
-          <Button variant="warning" size="lg" block>Agua 750ml $700</Button>
-        </div>
-        <div >
-          <Button variant="warning" size="lg" block>Bebida/gaseosa 500ml $700</Button>
+        <div>
+          <NewOrder createNewOrder={this.createNewOrder} />
         </div>
         <div>
-          <Button variant="warning" size="lg" block>Bebida/gaseosa 750ml $1000</Button>
+          <FinalOrder
+            orderLists={this.state.orderLists}
+            eliminateOrder={this.eliminateOrder}
+          />
         </div>
-
       </div>
+
     )
 
   }
