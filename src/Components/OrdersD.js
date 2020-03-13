@@ -1,19 +1,14 @@
-import React, { Component} from 'react';
+import React, {Component} from 'react';
 import Header from './header.js'
-import { Button, Container,Row,Col } from 'react-bootstrap'
+import { Button } from 'react-bootstrap'
 import '../css/Menu.css';
 
 class Dinner extends Component {
   render() {
     return (
       <div className='backgroundMenu'>
-        <div>
-          <Header titulo='Almuerzo / Cena' />
-        </div>
-        <div>
-          <div>
-            <Header titulo='Hamburguesas' />
-          </div>
+        <div><Header titulo='Almuerzo / Cena' /> </div>
+        <div>  <div><Header titulo='Hamburguesas' /> </div>
           <Button variant="warning" size="lg" block> Hamburguesa Simple $1000 </Button>
         </div>
         <div>
@@ -42,13 +37,12 @@ class Dinner extends Component {
         </div>
         <div>
           <Button variant="warning" size="lg" block>Bebida/gaseosa 500ml $700</Button>
-          <Button variant="warning" size="lg" block>Bebida/gaseosa 750ml $1000</Button></Col>
-          </Row>
-        </Container>
-        
-  </div>
+          <Button variant="warning" size="lg" block>Bebida/gaseosa 750ml $1000</Button>
+        </div>
+       
+      </div>
+     
     )
-
   }
 }
 export default Dinner;
