@@ -25,11 +25,11 @@ Yo como meserx quiero tomar el pedido de un cliente para no depender de mi mala 
 
 ### Prototipo de Alta fidelidad
 
-![Flujo](./src/img/Prot_1.png "Flujo")
+![Flujo](./src/img/Prot_1.PNG "Flujo")
 
-![Flujo](./src/img/Prot_2.png "Flujo")
+![Flujo](./src/img/Prot_2.PNG "Flujo")
 
-![Flujo](./src/img/Prot_3.png "Flujo")
+![Flujo](./src/img/Prot_3.jpg "Flujo")
 
 ![Flujo](./src/img/Prot_4.png "Flujo")
 
@@ -39,7 +39,7 @@ Yo como meserx quiero tomar el pedido de un cliente para no depender de mi mala 
 
 [![](https://www.loom.com/share/50a5526f80c245c5905ccc216ca73121)]()
 
-[![Ver Video]()](https://www.loom.com/share/50a5526f80c245c5905ccc216ca73121)
+[[Ver Video]()](https://www.loom.com/share/50a5526f80c245c5905ccc216ca73121)
 
 
 
