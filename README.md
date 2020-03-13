@@ -48,6 +48,6 @@ Toda nuestra planificación fue creada en Github, proyectos.
 
 ### Página Burger Queen
 
-https://burger-queen-4ac86.firebaseapp.com/OrdersB
+https://burger-queen-4ac86.firebaseapp.com
 
 
