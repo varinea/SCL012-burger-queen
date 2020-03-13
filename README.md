@@ -1,5 +1,3 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 # Burguer Queen
 
 Aplicación desarrollada para facilitar el servicio de atención en un pedido de restorant, donde el mesero podrá tomar la orden del cliente de forma facil y rapida, comunicandose con el cocinero el cual podrá tomar la orden cocinarla para luego dar aviso de la entrega, habiendo finalizado el proceso con el pedido llevado a la mesa.
@@ -39,8 +37,17 @@ Yo como meserx quiero tomar el pedido de un cliente para no depender de mi mala 
 
 [![](https://www.loom.com/share/50a5526f80c245c5905ccc216ca73121)]()
 
-(https://www.loom.com/share/50a5526f80c245c5905ccc216ca73121)
+https://www.loom.com/share/50a5526f80c245c5905ccc216ca73121
 
 
+## Planificación
+
+Toda nuestra planificación fue creada en Github, proyectos.
+
+![Planificación](./src/img/planificacion.jpg "Planificación")
+
+### Página Burger Queen
+
+https://burger-queen-4ac86.firebaseapp.com/OrdersB
 
 
