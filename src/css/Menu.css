@@ -10,3 +10,11 @@
     color: white;
     flex-direction: column;
 }
+.TittleHam{
+    margin-right: 900px;
+}
+.tittleOrder{
+   display: flex;
+   justify-content: center;
+   margin-top: -80px;
+}

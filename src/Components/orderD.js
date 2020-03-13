@@ -3,6 +3,8 @@ import NewOrder from '../Components/NewOrderD'
 import Header from './header.js'
 import '../css/Menu.css';
 import FinalOrder from '../Components/FinalOrderD.js'
+import { Button, Container, Row, Col } from 'react-bootstrap'
+
 
 class Dinner extends Component {
   state = {
@@ -28,9 +30,6 @@ class Dinner extends Component {
   render() {
     return (
       <div className='backgroundMenu'>
-        <div >
-          <Header titulo='Almuerzo / Cena' />
-        </div>
         <div>
           <NewOrder createNewOrder={this.createNewOrder} />
         </div>
@@ -40,8 +39,8 @@ class Dinner extends Component {
             eliminateOrder={this.eliminateOrder}
           />
         </div>
-      </div>
 
+      </div>
     )
 
   }

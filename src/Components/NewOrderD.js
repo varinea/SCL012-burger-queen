@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { Button } from 'react-bootstrap'
 import '../css/Menu.css';
 import uuid from 'uuid/v4'
 import Header from './header.js'
+import { Button, Container, Row, Col } from 'react-bootstrap'
 
 
 const stateInicial = {
@@ -54,61 +54,54 @@ class NewOrder extends Component {
     render() {
         return (
             <div className='backgroundMenu'>
-                <form onSubmit={this.handleSubmit}>
-                    <div>
-                        <input
-                            type="text"
-                            placeholder="Cliente"
-                            name="cliente"
-                            onChange={this.handleChange}
-                            value={this.state.orderList.cliente}
-                        />
+                <Container>
+                    <div className="tittleOrder" >
+                        <Header titulo='Almuerzo / Cena' />
                     </div>
-                    <div>
-                        <input
-                            type="number"
-                            placeholder="Número Mesa"
-                            name="mesa"
-                            onChange={this.handleChange}
-                            value={this.state.orderList.mesa}
-                        />
-                    </div>
-                    <div>
-                        <Header titulo='Hamburguesas' />
-                    </div>
-                    <div>
-                        <Button variant="warning" size="lg" block> Hamburguesa Simple $1000 </Button>
-                    </div>
-                    <div>
-                        <Button variant="warning" size="lg" block>Hamburguesa Doble $1500</Button>
-                    </div>
-                    <div >
-                        <Header titulo='Acompañamientos' />
-                    </div>
-                    <div >
-                        <Button variant="warning" size="lg" block>Papas fritas $500</Button>
-                    </div>
-                    <div >
-                        <Button variant="warning" size="lg" block>Aros de cebolla $500</Button>
-                    </div>
-                    <div >
-                        <Header titulo='Para Tomar' />
-                    </div>
-                    <div >
-                        <Button variant="warning" size="lg" block>Agua 500ml $500</Button>
-                    </div>
-                    <div >
-                        <Button variant="warning" size="lg" block>Agua 750ml $700</Button>
-                    </div>
-                    <div >
-                        <Button variant="warning" size="lg" block>Bebida/gaseosa 500ml $700</Button>
-                    </div>
-                    <div>
-                        <Button variant="warning" size="lg" block>Bebida/gaseosa 750ml $1000</Button>
-                    </div>
-                    <input type="submit" value="Agregar nuevo pedido" />
+                    <form onSubmit={this.handleSubmit}>
+                        <div>
+                            <input
+                                type="text"
+                                placeholder="Cliente"
+                                name="cliente"
+                                onChange={this.handleChange}
+                                value={this.state.orderList.cliente}
+                            />
+                        </div>
+                        <div>
+                            <input
+                                type="number"
+                                placeholder="Número Mesa"
+                                name="mesa"
+                                onChange={this.handleChange}
+                                value={this.state.orderList.mesa}
+                            />
+                        </div>
 
-                </form >
+                        <Col className="TittleHam">
+                            <Header titulo='Hamburguesas' />
+                            <Button variant="warning" size="lg" block> Hamburguesa Simple $1000 </Button>
+                            <Button variant="warning" size="lg" block>Hamburguesa Doble $1500</Button>
+                        </Col>
+
+                        <Col>
+                            <Header titulo='Acompañamientos' />
+                            <Button variant="warning" size="lg" block>Papas fritas $500</Button>
+                            <Button variant="warning" size="lg" block>Aros de cebolla $500</Button>
+                        </Col>
+                        <Col>
+                            <Header titulo='Para Tomar' />
+                            <Button variant="warning" size="lg" block>Agua 500ml $500</Button>
+                            <Button variant="warning" size="lg" block>Agua 750ml $700</Button>
+                            <Button variant="warning" size="lg" block>Agua 750ml $700</Button>
+                        </Col>
+                        <Col>
+                            <Button variant="warning" size="lg" block>Bebida/gaseosa 500ml $700</Button>
+                            <Button variant="warning" size="lg" block>Bebida/gaseosa 750ml $1000</Button>
+                        </Col>
+                        <input type="submit" value="Agregar nuevo pedido" />
+                    </form >
+                </Container>
             </div >
         )
     }

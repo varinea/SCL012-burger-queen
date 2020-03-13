@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Menu from './Components/Menu.js';
 import OrdersB from './Components/OrdersB.js';
 import OrdersD from './Components/OrderD.js';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
