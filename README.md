@@ -17,6 +17,28 @@ Yo como meserx quiero tomar el pedido de un cliente para no depender de mi mala 
 
 ## Proceso de diseño
 
+### Prototipo de baja fidelidad
+
+![Flujo](./src/img/Prot_6.png "Flujo")
+
+![Flujo](./src/img/Prot_7.png "Flujo")
+
+### Prototipo de Alta fidelidad
+
+![Flujo](./src/img/Prot_1.png "Flujo")
+
+![Flujo](./src/img/Prot_2.png "Flujo")
+
+![Flujo](./src/img/Prot_3.png "Flujo")
+
+![Flujo](./src/img/Prot_4.png "Flujo")
+
+![Flujo](./src/img/Prot_5.png "Flujo")
+
+## Test de Usabilidad
+
+[![Alt text for your video](https://www.loom.com/share/50a5526f80c245c5905ccc216ca73121)](https://www.loom.com/share/50a5526f80c245c5905ccc216ca73121)
+
 
 
 
