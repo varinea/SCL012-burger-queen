@@ -11,7 +11,7 @@ class FirstView extends Component {
     return (
       <div className='backgroundMenu'>
         <div >
-          <Header titulo='Selecciona tu cargo' />
+          <Header  titulo='Selecciona tu cargo' />
         </div>
 
         <div className='Breakfast'>
