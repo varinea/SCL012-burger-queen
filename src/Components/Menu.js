@@ -12,12 +12,12 @@ class Menu extends Component {
           <Header titulo='Menu' />
         </div>
 
-        <div className='btnBreakfast'>
+        <div className='Breakfast'>
           <Link to="/OrdersB">
             <Button variant="warning" size="lg" block> Desayuno </Button>
           </Link>
         </div>
-        <div className='btn-lunch'>
+        <div className='Breakfast'>
           <Link to="/OrdersD">
             <Button variant="warning" size="lg" block>Almuerzo o Cena</Button>
           </Link>

@@ -9,6 +9,7 @@
     font-size: calc(10px + 2vmin);
     color: white;
     flex-direction: column;
+    opacity: 0.9;
 }
 .TittleHam{
     margin-right: 900px;
