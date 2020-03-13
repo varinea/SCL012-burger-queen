@@ -16,9 +16,8 @@ class FirstView extends Component {
 
         <div className='Breakfast'>
           <Link to="/menu">
-            <Button variant="danger" className="bntMesero"> Mesero </Button>
+          <Button variant="warning" size="lg" block>Camarero</Button>
           </Link>
-
         </div>
 
       </div>

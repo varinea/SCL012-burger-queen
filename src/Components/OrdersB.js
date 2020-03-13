@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import NewOrder from '../Components/NewOrder'
 import Header from '../Components/header.js'
 import FinalOrder from '../Components/FinalOrder.js'
+import '../css/NewOrderCss.css'
 
 class Breakfast extends Component {
     state = {
@@ -27,10 +28,11 @@ class Breakfast extends Component {
     render() {
         return (
             <div className='backgroundMenu'>
-
-                <Header titulo='Desayunos' />
-
                 <div>
+                    <Header  titulo='Menu Desayuno' />
+                </div>
+                <div className="PhotoBreakfast"></div>
+                <div >
                     <NewOrder createNewOrder={this.createNewOrder} />
                 </div>
                 <div>
