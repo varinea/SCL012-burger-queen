@@ -18,44 +18,37 @@ const stateInicial = {
 class NewOrder extends Component {
     state = { ...stateInicial }
     handleClick = e => {
-        if (e.target.value === '') {
-            this.setState({
-                orderList: {
-                    ...this.state.orderList, // se hace una copia de lo que habia en los inputs
-                    [e.target.name]: e.target.value + 1 // se actualiza el valor del input cambiado
-                }
-            })
-        }
-    }
-    handleChange = e => {
-        // colocar lo que el usuario escribe en el state
         this.setState({
             orderList: {
-                ...this.state.orderList, // se hace una copia de lo que habia en los inputs
-                [e.target.name]: e.target.value // se actualiza el valor del input cambiado
+                ...this.state.orderList,
+                [e.target.name]: e.target.value + 1
+            }
+        })
+
+    }
+    handleChange = e => {
+        this.setState({
+            orderList: {
+                ...this.state.orderList,
+                [e.target.name]: e.target.value
             }
         })
     }
 
-    // Cuando el usuario envía el formulario
     handleSubmit = e => {
-        e.preventDefault(); // para trabajar con los datos una vez enviados
-        // Extraer los valores del state
+        e.preventDefault();
+        // Extrayendo los valores del state y creando un objeto
         const { cafeAmericano, cafeLeche, sandwich, jugo } = this.state.orderList
-        // Generar objeto con los datos
         const newOrder = { ...this.state.orderList }
-        newOrder.id = uuid(); // usando libreria de id //uuid es una libreria.
-
-        // Agregar la orderList al state de App ------->REVISAAAR
+        newOrder.id = uuid(); // usando libreria de id
         this.props.createNewOrder(newOrder)
-        // Colocar en el state el stateInicial
+        // Reiniciando formulario
         this.setState({
-            ...stateInicial // para reiniciar el formulario
+            ...stateInicial
         })
 
     }
     render() {
-
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>
@@ -64,8 +57,8 @@ class NewOrder extends Component {
                             type="text"
                             placeholder="Cliente"
                             name="cliente"
-                            onChange={this.handleChange} // cada vez que se escribe en el input se activará el evento handleChange
-                            value={this.state.orderList.cliente}  // guardando el valor de lo escrito
+                            onChange={this.handleChange}
+                            value={this.state.orderList.cliente}
                         />
                     </div>
                     <div>
@@ -73,8 +66,8 @@ class NewOrder extends Component {
                             type="number"
                             placeholder="Número Mesa"
                             name="mesa"
-                            onChange={this.handleChange} // cada vez que se escribe en el input se activará el evento handleChange
-                            value={this.state.orderList.mesa}  // guardando el valor de lo escrito
+                            onChange={this.handleChange}
+                            value={this.state.orderList.mesa}
                         />
                     </div>
 
