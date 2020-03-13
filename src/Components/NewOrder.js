@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Button } from 'react-bootstrap'
 import '../css/Menu.css';
 import uuid from 'uuid/v4'
+import '../css/NewOrderCss.css'
 
 const stateInicial = {
     orderList: {
@@ -52,7 +53,7 @@ class NewOrder extends Component {
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>
-                    <div>
+                    <div className="ClientInput">
                         <input
                             type="text"
                             placeholder="Cliente"
@@ -61,7 +62,7 @@ class NewOrder extends Component {
                             value={this.state.orderList.cliente}
                         />
                     </div>
-                    <div>
+                    <div className="NumTable">
                         <input
                             type="number"
                             placeholder="Número Mesa"
@@ -70,25 +71,26 @@ class NewOrder extends Component {
                             value={this.state.orderList.mesa}
                         />
                     </div>
-
-                    <div >
+                    <div className="BtnBreak">
+                    <div className="styleBreak">
+                        
                         <Button variant="warning" size="lg" block name="cafeAmericano" onClick={this.handleClick}
                         > Cafe Americano $500</Button>
                     </div>
-                    <div >
+                    <div className="styleBreak">
                         <Button variant="warning" size="lg" block name="cafeLeche" onClick={this.handleClick}
                         >Cafe con Leche $700</Button>
                     </div>
-                    <div >
+                    <div  className="styleBreak">
                         <Button variant="warning" size="lg" block name="sandwich" onClick={this.handleClick}
                         >Sandwich de jamón y queso $1000</Button>
                     </div>
-                    <div >
+                    <div className="styleBreak">
                         <Button variant="warning" size="lg" block name="jugo" onClick={this.handleClick}
                         >Jugo de frutas natural $700</Button>
                     </div>
-
-                    <input type="submit" value="Agregar nuevo pedido" />
+                    </div>
+                    <input className="InputNewOrder"  type="submit" value="Agregar nuevo pedido" />
 
                 </form>
             </div>
