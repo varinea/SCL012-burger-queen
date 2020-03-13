@@ -23,9 +23,9 @@ Yo como meserx quiero tomar el pedido de un cliente para no depender de mi mala 
 
 ### Prototipo de Alta fidelidad
 
-![Flujo](./src/img/Prot_1.PNG "Flujo")
+![Flujo](./src/img/Prot_1.jpg "Flujo")
 
-![Flujo](./src/img/Prot_2.PNG "Flujo")
+![Flujo](./src/img/Prot_2.jpg "Flujo")
 
 ![Flujo](./src/img/Prot_3.jpg "Flujo")
 
