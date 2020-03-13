@@ -39,7 +39,7 @@ Yo como meserx quiero tomar el pedido de un cliente para no depender de mi mala 
 
 [![](https://www.loom.com/share/50a5526f80c245c5905ccc216ca73121)]()
 
-[[Ver Video]()](https://www.loom.com/share/50a5526f80c245c5905ccc216ca73121)
+(https://www.loom.com/share/50a5526f80c245c5905ccc216ca73121)
 
 
 
